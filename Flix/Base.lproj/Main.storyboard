@@ -134,13 +134,19 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62T-By-EbC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="429"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-1z-Mno">
                                 <rect key="frame" x="20" y="324" width="100" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="69A-e2-DEu" appends="YES" id="8aD-WV-1W5"/>
+                                    <outletCollection property="gestureRecognizers" destination="AfR-NF-xxO" appends="YES" id="xud-SZ-H1z"/>
+                                    <outletCollection property="gestureRecognizers" destination="AfR-NF-xxO" appends="YES" id="Pwj-i1-SgL"/>
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hi-Nw-9JG">
@@ -178,9 +184,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvG-Ah-Aet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="69A-e2-DEu">
+                <tapGestureRecognizer id="AfR-NF-xxO">
                     <connections>
-                        <segue destination="WW1-Q2-f1W" kind="presentation" identifier="trailerSegue" modalTransitionStyle="crossDissolve" id="Qot-Ab-daY"/>
+                        <action selector="onTap:" destination="hoK-Mw-bKW" id="hzQ-gL-bk2"/>
+                        <segue destination="WW1-Q2-f1W" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="s6A-lo-RAY"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -207,6 +214,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="A6K-f9-VnY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZLM-dH-CDi"/>
                     <connections>
                         <outlet property="webView" destination="szO-a3-qzX" id="OrR-I8-Aue"/>
                     </connections>

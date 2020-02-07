@@ -24,6 +24,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
         // Do any additional setup after loading the view.
 		print("Hello")
+		print("\(tableView.isUserInteractionEnabled)")
 		
 		let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
 		let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -91,6 +92,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 		detailsViewController.movie = movie
 		
 		tableView.deselectRow(at: indexPath, animated: true)
+		print(detailsViewController.accessibilityRespondsToUserInteraction)
 		
     }
     
