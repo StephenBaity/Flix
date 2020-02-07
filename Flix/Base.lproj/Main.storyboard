@@ -145,8 +145,7 @@
                                 </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AfR-NF-xxO" appends="YES" id="xud-SZ-H1z"/>
-                                    <outletCollection property="gestureRecognizers" destination="AfR-NF-xxO" appends="YES" id="Pwj-i1-SgL"/>
+                                    <outletCollection property="gestureRecognizers" destination="P1H-0Q-yfU" appends="YES" id="r1e-dk-Die"/>
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hi-Nw-9JG">
@@ -172,6 +171,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="fkm-Xk-tT3"/>
                     </view>
                     <navigationItem key="navigationItem" id="AFl-Wg-dT2"/>
@@ -184,10 +184,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvG-Ah-Aet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="AfR-NF-xxO">
+                <tapGestureRecognizer id="P1H-0Q-yfU">
                     <connections>
-                        <action selector="onTap:" destination="hoK-Mw-bKW" id="hzQ-gL-bk2"/>
-                        <segue destination="WW1-Q2-f1W" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="s6A-lo-RAY"/>
+                        <segue destination="WW1-Q2-f1W" kind="presentation" modalTransitionStyle="crossDissolve" id="vXK-T4-cLU"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

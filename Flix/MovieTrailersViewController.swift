@@ -26,7 +26,7 @@ class MovieTrailersViewController: UIViewController, WKUIDelegate {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
-		let myURL = URL(string:"https://api.themoviedb.org/3/movie/\(movie["id"])/videos?api_key=5b9c82a33a2f9bbae16be7b023e52afe")
+		let myURL = URL(string:"https://www.google.com/")
 		let myRequest = URLRequest(url: myURL!)
 		webView.load(myRequest)
 

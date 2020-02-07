@@ -39,6 +39,7 @@ class MovieDetailsViewController: UIViewController {
 		let posterUrl = URL(string: baseUrl + posterPath)
 		
 		posterView.af_setImage(withURL: posterUrl!)
+		posterView.isUserInteractionEnabled = true
 		backdropView.af_setImage(withURL: posterUrl!)
 		
 	
@@ -46,9 +47,7 @@ class MovieDetailsViewController: UIViewController {
     }
 	
 	
-	@IBAction func onTap(_ sender: UITapGestureRecognizer) {
-		print("Hello")
-	}
+
 	
 
 	
@@ -62,8 +61,9 @@ class MovieDetailsViewController: UIViewController {
         // Get the new view controllerusing segue.destination.
 		let trailerViewController = segue.destination as! MovieTrailersViewController
         // Pass the selected object to the new view controller.
-		let picture = sender as! UIImageView
-		let indexPath = posterView.index(ofAccessibilityElement: picture)
+		//let picture = sender as! UIView
+		
+		//let indexPath = posterView.index(ofAccessibilityElement: picture)
 		
 		
 		
