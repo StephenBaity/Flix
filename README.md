@@ -15,17 +15,17 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 #### BONUS
 - [x] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
-- [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
+- [x] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthough GIF
 
 
-<img src="http://g.recordit.co/Bx0reAj69J.gif" width=250><br>
+<img src="http://g.recordit.co/FMI7wJfl38.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
-Tap Gesture would not work to modally present trailers
-ALso my REcord it stopped working.
+Tap Gesture would not work to modally present trailers, but I discovered that I had to programatically enable userInteraction with my UIImageView(PosterView).
+Was having a lot of trouble with casting between the arrays, dictionaries, and strings. This in turn made it very difficult to pass the movie Id from Detail Movie Controllers to the WebView
+
 ---
 
 ## Flix Part 1
