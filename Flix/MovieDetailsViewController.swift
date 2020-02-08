@@ -24,7 +24,7 @@ class MovieDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-		print("\(backdropView.isUserInteractionEnabled)")
+		//print("\(backdropView.isUserInteractionEnabled)")
 		
 		
 		titleLabel.text = movie["title"] as? String
@@ -42,37 +42,26 @@ class MovieDetailsViewController: UIViewController {
 		posterView.isUserInteractionEnabled = true
 		backdropView.af_setImage(withURL: posterUrl!)
 		
-	
-		
     }
 	
 	
-
-	
-
-	
-	
-	
-    
-    
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controllerusing segue.destination.
 		let trailerViewController = segue.destination as! MovieTrailersViewController
         // Pass the selected object to the new view controller.
-		//let picture = sender as! UIView
-		
-		//let indexPath = posterView.index(ofAccessibilityElement: picture)
-		
-		
-		
+
 		//Pass selected movie to next screen
-		trailerViewController.movie = movie
+		
+		trailerViewController.movieID = movie["id"] as! Int
+		
+	
+		   }
 		
 		
-		
-    }
+}
+
     
 
-}
+
