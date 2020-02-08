@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ql9-R9-Phb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1449" y="2054"/>
+            <point key="canvasLocation" x="-981" y="2065"/>
         </scene>
         <!--Superhero Movie Details View Controller-->
         <scene sceneID="bqE-bq-VKH">
@@ -237,6 +237,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TG-6T-b1s">
                                 <rect key="frame" x="20" y="324" width="100" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8zI-Io-osy" appends="YES" id="xla-4s-4jE"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fp5-oS-JT1">
                                 <rect key="frame" x="128" y="437" width="286" height="27"/>
@@ -273,6 +277,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yM1-ii-xmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8zI-Io-osy">
+                    <connections>
+                        <segue destination="WW1-Q2-f1W" kind="presentation" id="nAC-9H-Ijr"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-413.04347826086962" y="1269.6428571428571"/>
         </scene>
@@ -337,4 +346,7 @@
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nAC-9H-Ijr"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -36,21 +36,30 @@ class SuperheroMovieDetailsViewController: UIViewController {
 			let posterUrl = URL(string: baseUrl + posterPath)
 			
 			posterView.af_setImage(withURL: posterUrl!)
+			posterView.isUserInteractionEnabled = true
 			backdropView.af_setImage(withURL: posterUrl!)
 			
 		}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		  // Get the new view controller using segue.destination.
+		  // Pass the selected object to the new view controller.
+		  let trailerViewController = segue.destination as! MovieTrailersViewController
+		  // Pass the selected object to the new view controller.
+
+		  //Pass selected movie to next screen
+		  
+		  trailerViewController.movieID = movie["id"] as! Int
+	  }
 		
     }
     
 
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
+   
 
 

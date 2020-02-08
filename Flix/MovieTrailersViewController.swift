@@ -58,9 +58,7 @@ class MovieTrailersViewController: UIViewController, WKUIDelegate {
 				let video = trailer[0]
 				let key = video["key"] as! String
 				print(key)
-				
-				//print(dataDictionary)
-				
+								
 				self.trailerUrl = "https://www.youtube.com/watch?v=\(key)"
 				self.webView.reload()
 				
